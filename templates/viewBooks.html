@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Book Callno</th>
+          <th>Name</th>
+          <th scope="col">Author</th>
+          <th scope="col">Publisher</th>
+          <th scope="col">Quantity</th>
+          <th>Added Date</th>
+        </tr>
+      </thead>
+      {% for book in books %}
+      <tr>
+        {% for cell in book %}
+        <td>{{cell}}</td>
+        {% endfor %}
+        <!-- <td>{{book[call_no]}}</td>
+        <td>{{book['name']}}</td>
+        <td>{{book[author]}}</td>
+        <td>{{book[publisher]}}</td>
+        <td>{{book[quant]}}</td> -->
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

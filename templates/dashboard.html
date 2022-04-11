@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <style>
+      .parent {
+        height: 650px;
+        background: #cccccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .vertical-menu {
+        top: 5rem;
+        width: 500px; /* Set a width if you like */
+      }
+
+      .vertical-menu a {
+        background-color: #eee; /* Grey background color */
+        color: black; /* Black text color */
+        display: block; /* Make the links appear below each other */
+        padding: 12px; /* Add some padding */
+        text-decoration: none; /* Remove underline from links */
+      }
+
+      .vertical-menu a:hover {
+        background-color: #ccc; /* Dark grey background on mouse-over */
+      }
+
+      .vertical-menu a.active {
+        background-color: #04aa6d; /* Add a green color to the "active/current" link */
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="vertical-menu">
+        <a href="/form" class="active">Home</a>
+        <a href="/addBooks">Add Books</a>
+        <a href="/viewBooks">View Books</a>
+        <a href="/issueBooks">Issue Book</a>
+        <a href="/viewIBooks">View Issued Books</a>
+        <a href="/returnBook">Return Book</a>
+        <a href="/logout">Logout</a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Book Callno</th>
+          <th>Student ID</th>
+          <th>Student Name</th>
+          <th>Student Contact</th>
+          <th>Issued Date</th>
+        </tr>
+        {% for book in ibooks %}
+        <tr>
+          {% for cell in book %}
+          <td>{{cell}}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </thead>
+    </table>
+  </body>
+</html>
