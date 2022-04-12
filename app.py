@@ -1,4 +1,5 @@
-from flask import Flask,render_template, request
+from flask import Flask,render_template, request ,redirect, url_for
+
 from flask_mysqldb import MySQL
  
 app = Flask(__name__)
@@ -12,11 +13,7 @@ mysql = MySQL(app)
 
 @app.route('/')
 def home():
-    return "Welcome to Library Management System"
- 
-@app.route('/form')
-def form():
-    return render_template('form.html')
+    return render_template('index.html')
  
 @app.route('/login', methods = ['POST', 'GET'])
 def login():
@@ -25,12 +22,12 @@ def login():
      
     if request.method == 'POST':
         name = request.form['name']
-        age = request.form['age']
+        pwd = request.form['pass']
         cursor = mysql.connection.cursor()
-        cursor.execute(''' INSERT INTO info_table VALUES(%s,%s)''',(name,age))
+        cursor.execute(''' INSERT INTO info_table VALUES(%s,%s)''',(name,pwd))
         mysql.connection.commit()
         cursor.close()
-        return f"Done!!"
+        return redirect(url_for('dashboard'))
 
 @app.route('/dashboard')
 def dashboard():

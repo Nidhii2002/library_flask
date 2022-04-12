@@ -3,7 +3,8 @@
     <style>
       .parent {
         height: 650px;
-        background: #cccccc;
+        /* background: #cccccc; */
+        background: #1a1616;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -22,11 +23,12 @@
       }
 
       .vertical-menu a:hover {
-        background-color: #ccc; /* Dark grey background on mouse-over */
+        background-color: #ff6b6b; /* Dark grey background on mouse-over */
+        color: white;
       }
 
       .vertical-menu a.active {
-        background-color: #04aa6d; /* Add a green color to the "active/current" link */
+        background-color: #ff6b6b; /* Add a green color to the "active/current" link */
         color: white;
       }
     </style>
@@ -34,7 +36,6 @@
   <body>
     <div class="parent">
       <div class="vertical-menu">
-        <a href="/form" class="active">Home</a>
         <a href="/addBooks">Add Books</a>
         <a href="/viewBooks">View Books</a>
         <a href="/issueBooks">Issue Book</a>

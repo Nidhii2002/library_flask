@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/index.css') }}"
+    />
+  </head>
+  <body>
+    <div class="heading"><h1>Library Management System!</h1></div>
+    <div class="parent">
+      <div class="child">
+        <form action="/login" method="POST" class="short">
+          <p>Name: <input type="text" name="name" /></p>
+          <p>Password: <input type="integer" name="pass" /></p>
+          <p><input type="submit" value="Login" class="sbtn" /></p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

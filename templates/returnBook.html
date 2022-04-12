@@ -1,9 +1,18 @@
 <html>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/index.css') }}"
+    />
+  </head>
   <body>
-    <form action="/bookReturn" method="POST">
-      <p>Book Callno: <input type="text" name="call" /></p>
-      <p>Student ID: <input type="integer" name="id" /></p>
-      <p><input type="submit" value="Submit" /></p>
-    </form>
+    <div class="parent">
+      <form action="/bookReturn" method="POST" class="short">
+        <p>Book no: <input type="text" name="call" /></p>
+        <p>Student ID: <input type="integer" name="id" /></p>
+        <p><input type="submit" value="Return Book" class="sbtn" /></p>
+      </form>
+    </div>
   </body>
 </html>
